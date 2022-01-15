@@ -1,0 +1,27 @@
+
+<table>
+  <tr>
+    <th>Panel Name</th>
+    <th>Mac Id </th>
+    <th>Lat</th>
+    <th>Long</th>
+    <th>Location</th>
+  </tr>
+  <tr *ngFor="let li of lis">
+    <td><a mat-button  (click)="openDialog(li)"  > {{li.mac_id}}</a></td>
+    <td>{{li.panel_name}} </td>
+    <td>{{li.Lat}} </td>
+    <td>{{li.Lng}} </td>
+    <td><mat-icon mat-button (click)="openGoogelMapsModal(li)">room</mat-icon>
+    </td>
+  </tr>
+ 
+</table>
+
+<!-- <tr>
+  <td>
+    <agm-map [zoom]="15" [usePanning]="true" [latitude]="latitude" [longitude]="longitude">
+      <agm-marker *ngFor="let li of lis" [latitude]="li.Lat" [longitude]="li.Lng"></agm-marker>
+  </agm-map>
+  </td>
+</tr> -->
